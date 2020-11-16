@@ -1,10 +1,10 @@
 /*
 **
 **	SPAM program written by @mmnervous for INTchain titans testnet.
-**	COST 0.00003 INT / TX	-	gasPrice : 0x3B9ACA00. = 1000000000. => 0.000000001 * gas (30000) = 0.00003 INT
-**	COST 0.00015 INT / TX	-	gasPrice : 0x12A05F200. = 5000000000. => 0.000000005 * gas (30000) = 0.00015 INT
-**	COST 0.015 INT / TX		-	gasPrice : 0x746A528800 = 500000000000. => 0.0000005 * gas (30000) = 0.015 INT
-**	COST 0.15 INT / TX		-	gasPrice : 0x48C27395000 = 5000000000000. => 0.000005 * gas(30000) = 0.15 INT
+**	COST 0.0000304 INT / TX	-	gasPrice : 0x3B9ACA00. = 1000000000. => 0.000000001 * gas (34000) = 0.0000304 INT
+**	COST 0.000152 INT / TX	-	gasPrice : 0x12A05F200. = 5000000000. => 0.000000005 * gas (34000) = 0.000152 INT
+**	COST 0.0152 INT / TX		-	gasPrice : 0x746A528800 = 500000000000. => 0.0000005 * gas (34000) = 0.0152 INT
+**	COST 0.152 INT / TX		-	gasPrice : 0x48C27395000 = 5000000000000. => 0.000005 * gas(34000) = 0.152 INT
 **	https://t.me/mmnervous
 **	gas: 0x7530 = 30000.
 **
@@ -18,7 +18,7 @@
 \"from\": \"INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd\", \
 \"to\": \"INT3Qq1MPZME1ie6DvZ5Hf4QgTzuhPSJ\", \
 \"gas\": \"0x76c0\", \
-\"gasPrice\": \"0x48C27395000\", \
+\"gasPrice\": \"0x3B9ACA00\", \
 \"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' http://localhost:8555/testnet"
 #define ECHO "echo test"
 
