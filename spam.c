@@ -1,10 +1,10 @@
 /*
 **
 **	SPAM program written by @mmnervous for INTchain titans testnet.
-**	COST 0.0000304 INT / TX	-	gasPrice : 0x3B9ACA00. = 1000000000. => 0.000000001 * gas (34000) = 0.0000304 INT
-**	COST 0.000152 INT / TX	-	gasPrice : 0x12A05F200. = 5000000000. => 0.000000005 * gas (34000) = 0.000152 INT
-**	COST 0.0152 INT / TX		-	gasPrice : 0x746A528800 = 500000000000. => 0.0000005 * gas (34000) = 0.0152 INT
-**	COST 0.152 INT / TX		-	gasPrice : 0x48C27395000 = 5000000000000. => 0.000005 * gas(34000) = 0.152 INT
+**	REAL COST:	ESTIMATED : 0.0000304 INT / TX	-	gasPrice : 0x3B9ACA00. = 1000000000 => 0.000000001 * gas (34000) = 0.0000304 INT
+**		COST 0.000152 INT / TX	-	gasPrice : 0x12A05F200. = 5000000000 => 0.000000005 * gas (34000) = 0.000152 INT
+**		COST 0.0152 INT / TX		-	gasPrice : 0x746A528800 = 500000000000 => 0.0000005 * gas (34000) = 0.0152 INT
+**		COST 0.152 INT / TX		-	gasPrice : 0x48C27395000 = 5000000000000 => 0.000005 * gas(34000) = 0.152 INT
 **	https://t.me/mmnervous
 **	gas: 0x7530 = 30000.
 **
@@ -34,7 +34,7 @@ void delay(int seconds)
 
 void displayMessage(int argv1, int argv2, int argv3)
 {
-	int timer = 10000; // milli seconds
+	int timer = 5000; // milli seconds
 
 	if (argv1 > 1 && argv2 && argv3)
 	{
@@ -74,7 +74,7 @@ int	main(int argc, char *argv[])
 			while(j++ < argv2)
 				system(SEND_TRANSACTION);
 			if (i < argv1)
-				printf("%d TX sent. Next TX in %d seconds\n", argv2, (argv3 / 1000));
+				printf("%d TX sent. Next %d TX in %d seconds\n", argv2, argv2, (argv3 / 1000));
 			j = 0;
 			if (i < argv1)
 				delay(argv3); // milli seconds
