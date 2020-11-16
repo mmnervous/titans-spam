@@ -53,6 +53,8 @@ int	main(int argc, char *argv[])
 {
 	int i, j = 0;
 	int argv1, argv2, argv3 = 0;
+	int total = 0;
+
 	if (argc != 4)
 	{
 		printf(RED "usage: %s <number of blocks> <number of tx in a block> <delay (ms) between blocks>\n", argv[0], RESET);
@@ -63,6 +65,7 @@ int	main(int argc, char *argv[])
 		argv1 = atoi(argv[1]);
 		argv2 = atoi(argv[2]);
 		argv3 = atoi(argv[3]);
+		total = argv1 * argv2;
 		if (!argv1 || !argv2 || !argv3)
 		{
 			printf(RED "error\n", RESET);
@@ -75,7 +78,8 @@ int	main(int argc, char *argv[])
 				system(SEND_TRANSACTION);
 			if (i < argv1)
 			{
-				printf(GRN "Success ! %d TX sent. Next %d TX in %d seconds" RESET "\n", argv2, argv2, (argv3 / 1000));
+				total = total - argv2;
+				printf(GRN "Success ! %d TX sent. Next %d TX in %d seconds. %d TX left" RESET "\n", argv2, argv2, (argv3 / 1000), total);
 				delay(argv3); // milli seconds
 			}
 			j = 0;
