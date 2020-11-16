@@ -1,12 +1,8 @@
 /*
 **
 **	SPAM program written by @mmnervous for INTchain titans testnet.
-**	REAL COST:	ESTIMATED : 0.0000304 INT / TX	-	gasPrice : 0x3B9ACA00. = 1000000000 => 0.000000001 * gas (34000) = 0.0000304 INT
-**		COST 0.000152 INT / TX	-	gasPrice : 0x12A05F200. = 5000000000 => 0.000000005 * gas (34000) = 0.000152 INT
-**		COST 0.0152 INT / TX		-	gasPrice : 0x746A528800 = 500000000000 => 0.0000005 * gas (34000) = 0.0152 INT
-**		COST 0.152 INT / TX		-	gasPrice : 0x48C27395000 = 5000000000000 => 0.000005 * gas(34000) = 0.152 INT
+**	REAL COST:	0.000021 ESTIMATED : 0.0000304 INT	- gas: 0x76c0 gasPrice: 0x3B9ACA00
 **	https://t.me/mmnervous
-**	gas: 0x7530 = 30000.
 **
 */
 
