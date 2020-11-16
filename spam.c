@@ -27,7 +27,6 @@ int	main(int argc, char *argv[])
 {
 	int i, j = 0;
 	int argv1, argv2, argv3 = 0;
-	// printf("argv1 = %d, argv2 = %d, argv3 = %d\n", argv1, argv2, argv3); // debug
 	if (argc != 4)
 	{
 		printf("usage: %s <number of blocks> <number of tx in a block> <delay (ms) between blocks>\n", argv[0]);
