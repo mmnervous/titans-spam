@@ -10,7 +10,7 @@
 #include <time.h>
 
 #define TEST POST
-#define SEND_TRANSACTION "curl -X POST --data '{\"jsonrpc\":\"2.0\",\"method\":\"int_sendTransaction\",\"params\":[{\"from\": \"INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd\", \"to\": \"INT3Qq1MPZME1ie6DvZ5Hf4QgTzuhPSJ\", \"gas\": \"0x76C0\", \"gasPrice\": \"0x746A528800\", \"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' $LOC"
+#define SEND_TRANSACTION "curl -X POST --data '{\"jsonrpc\":\"2.0\",\"method\":\"int_sendTransaction\",\"params\":[{\"from\": \"INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd\", \"to\": \"INT3Qq1MPZME1ie6DvZ5Hf4QgTzuhPSJ\", \"gas\": \"0x76C0\", \"gasPrice\": \"0x746A528800\", \"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' http://localhost:8555/testnet"
 #define ECHO "echo test"
 
 void delay(int seconds)
