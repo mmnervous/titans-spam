@@ -78,7 +78,7 @@ int	main(int argc, char *argv[])
 				system(SEND_TRANSACTION);
 			if (i < argv1)
 			{
-				total = total - argv2;
+				total -= argv2;
 				printf(GRN "Success ! %d TX sent. Next %d TX in %d seconds. %d TX left" RESET "\n", argv2, argv2, (argv3 / 1000), total);
 				delay(argv3); // milli seconds
 			}
