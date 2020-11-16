@@ -25,7 +25,7 @@ void delay(int seconds)
 
 void displayMessage(int argv1, int argv2, int argv3)
 {
-	int timer = 5000; // milli seconds
+	int timer = 10000; // milli seconds
 
 	if (argv1 > 1 && argv2 && argv3)
 	{
