@@ -15,4 +15,4 @@ example:
 
 > this will send  50tx in total, 10tx every 3 seconds.
 
-[https://t.me/mmnervous](targetURL "Telegram")
+[Telegram @mmnervous](targetURL "https://t.me/mmnervous")
