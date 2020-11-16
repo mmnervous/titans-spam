@@ -49,7 +49,7 @@ int	main(int argc, char *argv[])
 		{
 			while(j++ < argv2)
 				system(SEND_TRANSACTION);
-			printf("%d TX sent. Break for %d seconds\n", argv2, (argv3 / 1000));
+			printf("%d TX sent. Sleep for %d seconds\n", argv2, (argv3 / 1000));
 			j = 0;
 			if (i < argv1)
 				delay(argv3); // milli seconds
