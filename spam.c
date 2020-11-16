@@ -1,6 +1,6 @@
 /*
 **
-**	SPAM program written by @mmnervous.
+**	SPAM program written by @mmnervous for INTchain titans testnet.
 **	COST 0.00003 INT / TX
 **	https://t.me/mmnervous
 **
