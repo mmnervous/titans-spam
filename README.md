@@ -13,6 +13,6 @@ example:
 
 `./spam 5 10 3000`
 
-> this will send  500tx in total, 10tx every 3 seconds.
+> this will send  50tx in total, 10tx every 3 seconds.
 
 [https://t.me/mmnervous](targetURL "Telegram")
