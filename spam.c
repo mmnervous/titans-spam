@@ -42,6 +42,9 @@ int	main(int argc, char *argv[])
 			printf("error\n");
 			return (-1);
 		}
+		printf("This will send %d TX in total. %d TX every %d seconds... Starting in 10 seconds... CTRL + Z for cancel\n", (argv1 * argv2), argv2, (argv3 / 1000));
+		fflush(stdout);
+		delay(10000);
 		while (i++ < argv1)
 		{
 			while(j++ < argv2)
