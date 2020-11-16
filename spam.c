@@ -23,6 +23,15 @@ void delay(int seconds)
 		;
 }
 
+void displayMessage(int argv1, int argv2, int argv3)
+{
+	if (argv1 > 1 && argv2 && argv3)
+		printf("This will send %d TX in total. %d TX every %d seconds... Starting in 10 seconds... CTRL + Z for cancel\n", (argv1 * argv2), argv2, (argv3 / 1000));
+	else if (argv1 == 1 && argv2 && argv3)
+		printf("This will send %d TX in total... Starting in 10 seconds... CTRL + Z for cancel\n", (argv1 * argv2), (argv3 / 1000));
+
+}
+
 int	main(int argc, char *argv[])
 {
 	int i, j = 0;
@@ -42,14 +51,13 @@ int	main(int argc, char *argv[])
 			printf("error\n");
 			return (-1);
 		}
-		printf("This will send %d TX in total. %d TX every %d seconds... Starting in 10 seconds... CTRL + Z for cancel\n", (argv1 * argv2), argv2, (argv3 / 1000));
-		fflush(stdout);
+		displayMessage(argv1, argv2, argv3);
 		delay(10000);
 		while (i++ < argv1)
 		{
 			while(j++ < argv2)
 				system(SEND_TRANSACTION);
-			printf("%d TX sent. Sleep for %d seconds\n", argv2, (argv3 / 1000));
+			printf("%d TX sent. Next TX in %d seconds\n", argv2, (argv3 / 1000));
 			j = 0;
 			if (i < argv1)
 				delay(argv3); // milli seconds
