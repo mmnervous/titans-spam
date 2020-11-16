@@ -1,7 +1,7 @@
 /*
 **
 **	SPAM program written by @mmnervous.
-**	COST 0.0105001 INT / TX
+**	COST 0.00003 INT / TX
 **	https://t.me/mmnervous
 **
 */
