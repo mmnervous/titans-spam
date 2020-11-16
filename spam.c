@@ -18,9 +18,7 @@ void delay(int seconds)
 	int milli_seconds;
 
 	milli_seconds = 1000 * seconds;
-
 	clock_t start_time = clock();
-
 	while (clock() < start_time + milli_seconds)
 		;
 }
