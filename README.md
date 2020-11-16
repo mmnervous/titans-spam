@@ -15,4 +15,4 @@ example:
 
 > this will send  50tx in total, 10tx every 3 seconds.
 
-[Telegram @mmnervous]: https://t.me/mmnervous
+[Telegram @mmnervous](https://t.me/mmnervous)
