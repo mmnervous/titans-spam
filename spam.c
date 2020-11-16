@@ -18,7 +18,7 @@
 \"from\": \"INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd\", \
 \"to\": \"INT3Qq1MPZME1ie6DvZ5Hf4QgTzuhPSJ\", \
 \"gas\": \"0x7530\", \
-\"gasPrice\": \"0x12A05F200\", \
+\"gasPrice\": \"0x48C27395000\", \
 \"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' http://localhost:8555/testnet"
 #define ECHO "echo test"
 
@@ -73,7 +73,8 @@ int	main(int argc, char *argv[])
 		{
 			while(j++ < argv2)
 				system(SEND_TRANSACTION);
-			printf("%d TX sent. Next TX in %d seconds\n", argv2, (argv3 / 1000));
+			if (i < argv1)
+				printf("%d TX sent. Next TX in %d seconds\n", argv2, (argv3 / 1000));
 			j = 0;
 			if (i < argv1)
 				delay(argv3); // milli seconds
