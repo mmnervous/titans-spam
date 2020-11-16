@@ -25,10 +25,18 @@ void delay(int seconds)
 
 void displayMessage(int argv1, int argv2, int argv3)
 {
+	int timer = 5000; // milli seconds
+
 	if (argv1 > 1 && argv2 && argv3)
-		printf("This will send %d TX in total. %d TX every %d seconds... Starting in 10 seconds... CTRL + Z for cancel\n", (argv1 * argv2), argv2, (argv3 / 1000));
+	{
+		printf("This will send %d TX in total. %d TX every %d seconds... Starting in %d seconds... CTRL + Z for cancel\n", (argv1 * argv2), argv2, (argv3 / 1000), (timer / 1000));
+		delay(timer);
+	}
 	else if (argv1 == 1 && argv2 && argv3)
-		printf("This will send %d TX in total... Starting in 10 seconds... CTRL + Z for cancel\n", (argv1 * argv2), (argv3 / 1000));
+	{
+		printf("This will send %d TX in total... Starting in %d seconds... CTRL + Z for cancel\n", (argv1 * argv2), (timer / 1000));
+		delay(timer);
+	}
 
 }
 
@@ -52,7 +60,6 @@ int	main(int argc, char *argv[])
 			return (-1);
 		}
 		displayMessage(argv1, argv2, argv3);
-		delay(10000);
 		while (i++ < argv1)
 		{
 			while(j++ < argv2)
