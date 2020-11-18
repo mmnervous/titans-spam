@@ -22,7 +22,7 @@
 \"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' http://localhost:8555/testnet"
 #define ECHO "echo test"
 
-void 	delay(int seconds)
+void	delay(int seconds)
 {
 	int milli_seconds;
 
@@ -32,7 +32,7 @@ void 	delay(int seconds)
 		;
 }
 
-void 	displayMessage(int argv1, int argv2, int argv3)
+void	displayMessage(int argv1, int argv2, int argv3)
 {
 	int timer = 2000; // milli seconds
 
