@@ -75,9 +75,6 @@ void	spam(int argv1, int argv2, int argv3)
 
 int	main(int argc, char *argv[])
 {
-	int i, j = 0;
-	int argv1, argv2, argv3 = 0;
-
 	if (argc != 4)
 	{
 		printf(RED "usage: %s <number of blocks> <number of tx in a block> <delay (ms) between blocks>\n", argv[0], RESET);
@@ -85,16 +82,13 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
-		argv1 = atoi(argv[1]);
-		argv2 = atoi(argv[2]);
-		argv3 = atoi(argv[3]);
-		if (!argv1 || !argv2 || !argv3)
+		if (!argv[1] || !argv[2] || !argv[3])
 		{
 			printf(RED "error\n", RESET);
 			return (-1);
 		}
-		displayMessage(argv1, argv2, argv3);
-		spam(argv1, argv2, argv3);
+		displayMessage(atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
+		spam(atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
 	}
 	return (0);
 }
