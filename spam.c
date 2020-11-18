@@ -58,6 +58,7 @@ void	spam(int argv1, int argv2, int argv3)
 	i = 0;
 	j = 0;
 	total = argv1 * argv2;
+	displayMessage(argv1, argv2, argv3);
 	while (i++ < argv1)
 	{
 		while(j++ < argv2)
@@ -78,17 +79,14 @@ int		main(int argc, char *argv[])
 	if (argc != 4 || atoi(argv[1]) < 1 || atoi(argv[2]) < 1)
 	{
 		if (argc == 4 && atoi(argv[1]) < 1 && atoi(argv[2]))
-			printf(RED "Number of blocks must be >= 1" RESET "\n");
+			printf(RED "Number of blocks should be >= 1" RESET "\n");
 		else if (argc == 4 && atoi(argv[1]) && atoi(argv[2]) < 1)
-			printf(RED "Number of TX must be >= 1" RESET "\n");
+			printf(RED "Number of TX should be >= 1" RESET "\n");
 		else
 			printf(RED "usage: %s <number of blocks> <number of tx in a block> <delay (ms) between blocks>" RESET "\n", argv[0]);
 		return (-1);
 	}
 	else
-	{
-		displayMessage(atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
 		spam(atoi(argv[1]), atoi(argv[2]), atoi(argv[3]));
-	}
 	return (0);
 }
