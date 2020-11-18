@@ -49,11 +49,34 @@ void displayMessage(int argv1, int argv2, int argv3)
 
 }
 
+void	spam(int argv1, int argv2, int argv3)
+{
+	int i;
+	int j;
+	int total;
+
+	i = 0;
+	j = 0;
+	total = argv1 * argv2;
+	while (i++ < argv1)
+	{
+		while(j++ < argv2)
+			system(SEND_TRANSACTION);
+		if (i < argv1)
+		{
+			total -= argv2;
+			printf(GRN "Success ! %d TX sent. Next %d TX in %d seconds. %d TX left" RESET "\n", argv2, argv2, (argv3 / 1000), total);
+			delay(argv3); // milli seconds
+		}
+		j = 0;
+	}
+	printf(GRN "Success !! %d TX sent !\n", (argv1 * argv2), RESET);
+}
+
 int	main(int argc, char *argv[])
 {
 	int i, j = 0;
 	int argv1, argv2, argv3 = 0;
-	int total = 0;
 
 	if (argc != 4)
 	{
@@ -65,26 +88,13 @@ int	main(int argc, char *argv[])
 		argv1 = atoi(argv[1]);
 		argv2 = atoi(argv[2]);
 		argv3 = atoi(argv[3]);
-		total = argv1 * argv2;
 		if (!argv1 || !argv2 || !argv3)
 		{
 			printf(RED "error\n", RESET);
 			return (-1);
 		}
 		displayMessage(argv1, argv2, argv3);
-		while (i++ < argv1)
-		{
-			while(j++ < argv2)
-				system(SEND_TRANSACTION);
-			if (i < argv1)
-			{
-				total -= argv2;
-				printf(GRN "Success ! %d TX sent. Next %d TX in %d seconds. %d TX left" RESET "\n", argv2, argv2, (argv3 / 1000), total);
-				delay(argv3); // milli seconds
-			}
-			j = 0;
-		}
-		printf(GRN "Success !! %d TX sent !\n", (argv1 * argv2), RESET);
+		spam(argv1, argv2, argv3);
 	}
 	return (0);
 }
