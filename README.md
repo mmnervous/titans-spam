@@ -5,7 +5,7 @@ TX spam on INTCHAIN's testnet
 
 `cd titans-spam/`
 
-`gcc spam.c -o spam`
+`gcc spam.c -o spam_titans`
 
 usage: ./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
 
