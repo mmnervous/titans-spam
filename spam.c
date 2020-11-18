@@ -1,7 +1,7 @@
 /*
 **
 **	SPAM program written by @mmnervous for INTchain titans testnet.
-**	REAL COST:	0.000021 ESTIMATED : 0.0000304 INT	- gas: 0x76c0 gasPrice: 0x3B9ACA00
+**	REAL COST: 0.000021	ESTIMATED : 0.0000304 INT	-	gas: 0x76c0 gasPrice: 0x3B9ACA00
 **	https://t.me/mmnervous
 **
 */
@@ -22,7 +22,7 @@
 \"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' http://localhost:8555/testnet"
 #define ECHO "echo test"
 
-void delay(int seconds)
+void 	delay(int seconds)
 {
 	int milli_seconds;
 
@@ -32,7 +32,7 @@ void delay(int seconds)
 		;
 }
 
-void displayMessage(int argv1, int argv2, int argv3)
+void 	displayMessage(int argv1, int argv2, int argv3)
 {
 	int timer = 2000; // milli seconds
 
@@ -73,7 +73,7 @@ void	spam(int argv1, int argv2, int argv3)
 	printf(GRN "Success !! %d TX sent !\n", (argv1 * argv2), RESET);
 }
 
-int	main(int argc, char *argv[])
+int		main(int argc, char *argv[])
 {
 	if (argc != 4)
 	{
