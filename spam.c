@@ -36,12 +36,12 @@ void displayMessage(int argv1, int argv2, int argv3)
 {
 	int timer = 2000; // milli seconds
 
-	if (argv1 > 1 && argv2 && argv3)
+	if (argv1 > 1 && argv2)
 	{
 		printf(YEL "This will send %d TX in total. %d TX every %d seconds... Starting in %d seconds... CTRL + Z for cancel" RESET "\n", (argv1 * argv2), argv2, (argv3 / 1000), (timer / 1000));
 		delay(timer);
 	}
-	else if (argv1 == 1 && argv2 && argv3)
+	else if (argv1 == 1 && argv2)
 	{
 		printf(YEL "This will send %d TX in total... Starting in %d seconds... CTRL + Z for cancel" RESET "\n", (argv1 * argv2), (timer / 1000));
 		delay(timer);
@@ -82,7 +82,7 @@ int	main(int argc, char *argv[])
 	}
 	else
 	{
-		if (!argv[1] || !argv[2] || !argv[3])
+		if (!atoi(argv[1]) || !atoi(argv[2]))
 		{
 			printf(RED "error\n", RESET);
 			return (-1);
