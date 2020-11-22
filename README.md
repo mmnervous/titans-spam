@@ -11,7 +11,7 @@ gcc spam.c -o spam_titans
 
 ## Usage
 
-usage: ./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
+./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
 
 ## Example
 
