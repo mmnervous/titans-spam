@@ -9,6 +9,10 @@ cd titans-spam/
 gcc spam.c -o spam_titans
 ```
 
+## Set addresses
+
+Edit sendTransaction.json to put your addresses.
+
 ## Usage
 
 ./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
@@ -17,6 +21,6 @@ gcc spam.c -o spam_titans
 
 `./spam_titans 5 10 3000`
 
-> this will send  50tx in total, 10tx every 3 seconds.
+> This will send  50tx in total, 10tx every 3 seconds.
 
 [Telegram @mmnervous](https://t.me/mmnervous)
