@@ -9,9 +9,9 @@ cd titans-spam/
 gcc spam.c -o spam_titans
 ```
 
-## Set addresses
+## Set addresses, gas prices and value
 
-Edit sendTransaction.json to put your addresses.
+Edit sendTransaction.json
 
 ```bash
 nano sendTransaction.json
