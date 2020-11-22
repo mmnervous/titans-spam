@@ -1,15 +1,19 @@
 # titans-spam
 TX spam on INTCHAIN's testnet
 
-`git clone https://github.com/mmnervous/titans-spam.git`
+## Installation
 
-`cd titans-spam/`
+```bash
+git clone https://github.com/mmnervous/titans-spam.git
+cd titans-spam/
+gcc spam.c -o spam_titans
+```
 
-`gcc spam.c -o spam_titans`
+## Usage
 
 usage: ./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
 
-example:
+## Example
 
 `./spam_titans 5 10 3000`
 
