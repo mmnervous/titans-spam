@@ -13,6 +13,9 @@ gcc spam.c -o spam_titans
 
 Edit sendTransaction.json to put your addresses.
 
+```bash
+nano sendTransaction.json
+```
 ## Usage
 
 ./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
