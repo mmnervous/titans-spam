@@ -4,9 +4,9 @@ TX spam on INTCHAIN's testnet
 ## Installation
 
 ```bash
-`git clone https://github.com/mmnervous/titans-spam.git`
-`cd titans-spam/`
-`gcc spam.c -o spam_titans`
+git clone https://github.com/mmnervous/titans-spam.git
+cd titans-spam/
+gcc spam.c -o spam_titans
 ```
 
 ## Set addresses, gas prices and value
