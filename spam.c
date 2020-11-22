@@ -14,12 +14,7 @@
 #define YEL   "\x1B[33m"
 #define RESET "\x1B[0m"
 
-#define SEND_TRANSACTION "curl -X POST --data '{\"jsonrpc\":\"2.0\",\"method\":\"int_sendTransaction\",\"params\":[{ \
-\"from\": \"INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd\", \
-\"to\": \"INT3Qq1MPZME1ie6DvZ5Hf4QgTzuhPSJ\", \
-\"gas\": \"0x76c0\", \
-\"gasPrice\": \"0x3B9ACA00\", \
-\"value\": \"0x174876E800\", \"data\": \"\"}],\"id\":1}' -H 'content-type: application/json;' http://localhost:8555/testnet"
+#define SEND_TRANSACTION "curl -d \"@sendTransaction.json\" -H 'content-type: application/json;' -X POST http://localhost:8555/testnet"
 #define ECHO "echo test"
 
 void	delay(int seconds)
