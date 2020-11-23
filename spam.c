@@ -13,7 +13,6 @@
 #define GRN   "\x1B[32m"
 #define YEL   "\x1B[33m"
 #define RESET "\x1B[0m"
-
 #define SEND_TRANSACTION "curl -d \"@sendTransaction.json\" -H 'content-type: application/json;' -X POST http://localhost:8555/testnet"
 #define ECHO "echo test"
 
@@ -29,8 +28,9 @@ void	delay(int seconds)
 
 void	displayMessage(int argv1, int argv2, int argv3)
 {
-	int timer = 2000; // milli seconds
+	int timer;
 
+	timer = 2000; // milli seconds
 	if (argv1 > 1 && argv2)
 	{
 		printf(YEL "This will send %d TX in total. %d TX every %d seconds... Starting in %d seconds... CTRL + Z for cancel" RESET "\n", (argv1 * argv2), argv2, (argv3 / 1000), (timer / 1000));

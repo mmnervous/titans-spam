@@ -18,7 +18,7 @@ nano sendTransaction.json
 ```
 ## Usage
 
-./spam [number of blocks] [number of tx in a block] [delay (ms) between blocks]
+./spam_titans [number of blocks] [number of tx in a block] [delay (ms) between blocks]
 
 > You need to unlock your account before using the program.
 
