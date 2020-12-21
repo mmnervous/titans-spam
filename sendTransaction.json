@@ -1,13 +1,15 @@
 {
-	"jsonrpc":"2.0",
-	"method":"int_sendTransaction",
-	"params":[{
-		"from": "INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd",
-		"to": "INT3J9BwQvptbjuQZ8LgHy9q17YX2t6e",
-		"gas": "0x76c0",
-		"gasPrice": "0x3B9ACA00",
-		"value": "0x174876E800",
-		"data": ""
-		}],
-	"id":1
+	"jsonrpc": "2.0",
+	"method": "int_sendTransaction",
+	"params": [
+		{
+			"from": "INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd",
+			"to": "INT3J9BwQvptbjuQZ8LgHy9q17YX2t6e",
+			"gas": "0x76c0",
+			"gasPrice": "0x3B9ACA00",
+			"value": "0x174876E800",
+			"data": ""
+		}
+	],
+	"id": 1
 }
