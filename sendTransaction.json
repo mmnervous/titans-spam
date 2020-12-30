@@ -5,8 +5,8 @@
 		{
 			"from": "INT3HcmxkEx7dDRwVHqEVV46v1dYFsyd",
 			"to": "INT3J9BwQvptbjuQZ8LgHy9q17YX2t6e",
-			"gas": "0x76c0",
-			"gasPrice": "0x3B9ACA00",
+			"gas": "0x5208",
+			"gasPrice": "0x77359400",
 			"value": "0x174876E800",
 			"data": ""
 		}
