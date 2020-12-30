@@ -5,7 +5,7 @@ Stress test program for intchain 4.0 testnet
 
 ```bash
 git clone https://github.com/mmnervous/titans-spam.git
-cd titans-spam/
+cd titans-spam/.old/
 gcc spam.c -o spam_titans
 ```
 
