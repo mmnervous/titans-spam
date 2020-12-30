@@ -1,5 +1,5 @@
-# titans-spam
-TX spam on INTCHAIN's testnet
+# For .old version
+Stress test program for intchain 4.0 testnet
 
 ## Installation
 
