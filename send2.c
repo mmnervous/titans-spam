@@ -4,7 +4,6 @@
 int sendTransaction(char **result, char *from, char *to, char *gas, char *gasPrice, char *value)
 {
 	char				int_sendTransaction[1000];
-	// char				*result;
 	start_len			data = {.start = 0, .len = 0};
 	get_request			req = {.buffer = NULL, .len = 0, .buflen = 0};
 	CURLcode ret;
@@ -32,8 +31,6 @@ int sendTransaction(char **result, char *from, char *to, char *gas, char *gasPri
 	data = ft_truncate(req.buffer, '"', 5);
 	if (!(*result = ft_strsub(req.buffer, data.start, data.len))) // crop string
 		return (-1);
-	// printf("TX: %s\n", *result);
-
 	free(req.buffer);
 
 	curl_easy_cleanup(hnd);
@@ -54,7 +51,7 @@ int main(int argc, char *argv[])
 		while (i++ < atoi(argv[1]))
 		{
 			sendTransaction(&result, FROM_ADDRESS, TO_ADDRESS, GAS, GAS_PRICE, VALUE);
-			printf("\r%d Transaction sent. TX: %s", i, result);
+			printf("\r%d Transaction sent. TxHash: %s", i, result);
 			fflush(stdout);
 			delay(atoi(argv[2]));
 		}
