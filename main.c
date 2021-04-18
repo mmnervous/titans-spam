@@ -44,16 +44,30 @@ int main(int argc, char *argv[])
 {
 	char	*result;
 	int		i = 0;
+	int		j = 0;
 
-	if (argc != 3)
-		printf("usage: %s <number of tx> <delay(ms) between tx>\n", argv[0]);
+	if (argc != 5)
+		printf("usage: %s  <number of blocks> <delay between block> <number of tx in a block> <delay between tx>\n", argv[0]);
 	else
+	{
 		while (i++ < atoi(argv[1]))
 		{
-			sendTransaction(&result, FROM_ADDRESS, TO_ADDRESS, GAS, GAS_PRICE, VALUE);
-			printf("\r%d Transaction sent. TxHash: %s", i, result);
-			fflush(stdout);
-			delay(atoi(argv[2]));
+			while (j++ < atoi(argv[3]))
+			{
+				sendTransaction(&result, FROM_ADDRESS, TO_ADDRESS, GAS, GAS_PRICE, VALUE);
+				printf("\r%d Transaction(s) sent. TxHash: %s", j, result);
+				fflush(stdout);
+				delay(atoi(argv[4]));
+			}
+			j = 0;
+			printf("\n");
+			if (i < atoi(argv[1]))
+			{
+				printf("sleep %d. Blocks left: %d\n", atoi(argv[2])/1000, (atoi(argv[1]) - i));
+				delay(atoi(argv[2]));
+			}
 		}
+		printf("%d transaction(s) total sent\n", atoi(argv[3])*atoi(argv[1]));
+	}
 	return (0);
 }
