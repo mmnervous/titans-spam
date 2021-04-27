@@ -57,7 +57,8 @@ int main(int argc, char *argv[])
 				sendTransaction(&result, FROM_ADDRESS, TO_ADDRESS, GAS, GAS_PRICE, VALUE);
 				printf("\r%d Transaction(s) sent. TxHash: %s", j, result);
 				fflush(stdout);
-				delay(atoi(argv[4]));
+				if (atoi(argv[4]))
+					delay(atoi(argv[4]));
 			}
 			j = 0;
 			printf("\n");
